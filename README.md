@@ -1,7 +1,7 @@
 ---
 title: "PCOS-HPOD-AMH Project"
 author: "Megha Patel"
-date: "`r Sys.Date()`"
+date: "03-25-26"
 ---
 
 
@@ -25,6 +25,7 @@ This dataset looks at ovarian function measures in normogonadotropic anovulation
 `MP_project_4.Rmd`
   - reads data table and figure in 
   - compiles a readable report with table and figure descriptions
+
 `Makefile`
   - contains rules for report building
   - `make .final` will generate the two `.rds` files needed for the report
