@@ -28,4 +28,4 @@ This dataset looks at ovarian function measures in normogonadotropic anovulation
 
 `Makefile`
   - contains rules for report building
-  - `make .final` will generate the two `.rds` files needed for the report
+  - `make ` will generate the two `.rds` files needed for the report
