@@ -14,3 +14,7 @@ output/boxplot.png: code/01_read.R output/data_clean.rds code/03_figure.R
 	
 .PHONY: components
 components: output/table_one.rds output/boxplot.png
+
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
