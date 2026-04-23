@@ -1,4 +1,4 @@
-
+#report rules
 MP_project_4.html: code/04_render.R MP_project_4.Rmd components
 	Rscript code/04_render.R
 
@@ -18,3 +18,12 @@ components: output/table_one.rds output/boxplot.png
 .PHONY: install
 install:
 	Rscript -e "renv::restore(prompt = FALSE)"
+	
+#docker rules
+project_image:
+	docker build -t project_image .
+	touch $@
+
+report/MP_project_4.html:
+	mkdir -p report
+	docker run -v "/$$(pwd)/report:/project/report" project_image
