@@ -29,4 +29,4 @@ project_image:
 
 report/MP_project_4.html:
 	mkdir -p report
-	docker run -v "/$$(pwd)/report:/project/report" project_image
+	docker run -v "/$$(pwd)/report:/project/report" megha0301/project_image
