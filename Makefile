@@ -19,10 +19,13 @@ components: output/table_one.rds output/boxplot.png
 install:
 	Rscript -e "renv::restore(prompt = FALSE)"
 	
+.PHONY: clean
+clean:
+	rm -f output/* && rm -f *.html && rm -f report/*.html
+	
 #docker rules
 project_image:
-	docker build -t project_image .
-	touch $@
+	docker build -t megha0301/project_image .
 
 report/MP_project_4.html:
 	mkdir -p report

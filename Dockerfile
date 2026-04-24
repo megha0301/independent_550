@@ -1,7 +1,6 @@
-FROM rocker/tidyverse:4.5.1 as base
+FROM rocker/tidyverse:4.5.1
 
-RUN apt-get update && apt-get install -y pandoc
-RUN apt-get install -y libuv1
+RUN apt-get update && apt-get install -y pandoc libuv1
 
 RUN mkdir /project
 WORKDIR /project
@@ -19,9 +18,8 @@ COPY renv/activate.R renv
 COPY renv/settings.json renv
 
 RUN Rscript -e "renv::restore(prompt=FALSE)"
-RUN Rscript -e "renv::snapshot(type = 'all', prompt = FALSE)"
-
+RUN Rscript -e "renv::snapshot(type='all', prompt=FALSE)"
 
 RUN mkdir report
 
-CMD make && mv MP_project_4.html report
+CMD make && mv MP_project_4.html report/
