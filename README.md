@@ -29,11 +29,11 @@ This dataset looks at ovarian function measures in normogonadotropic anovulation
 ## Building the Report: Via Docker or Manually
 
 `Makefile`
-  Rules for Docker automation
+Rules for Docker automation
   - `make project_image` will build the project image from the hub [https://hub.docker.com/layers/megha0301/project_image/individual/images/sha256:260584b8b4998154d45dd6dd0740a86526da75419e24c829de12f3f66853f8d4?uuid=C3260065-F3E5-435A-B43D-F9BFF60FABC7]
   - `make report/MP_project_4.html` will run the automated version of the report and hold it in the report folder
     - this will run on Windows file paths
-  Manual build without using Docker
+Manual build without using Docker
   - contains rules for report building
   - `make install` will update your packages 
   - `make ` will generate the two `.rds` files needed for the report and house the report in the general folder
