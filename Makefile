@@ -25,8 +25,8 @@ clean:
 	
 #docker rules
 project_image:
-	docker build -t megha0301/project_image .
+	docker build -t megha0301/project_image:individual .
 
 report/MP_project_4.html:
 	mkdir -p report
-	docker run -v "/$$(pwd)/report:/project/report" megha0301/project_image
+	docker run -v "/$$(pwd)/report:/project/report" megha0301/project_image:individual
